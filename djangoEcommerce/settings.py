@@ -26,8 +26,7 @@ SECRET_KEY = '$j$h8xti0v-n91@)xplupju@yfzo1j_mus5)9ibua)3kh*)zwt'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+
 
 # Application definition
 
