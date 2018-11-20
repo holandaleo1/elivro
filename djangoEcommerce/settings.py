@@ -99,7 +99,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bdheroku',
+        'NAME': 'dft1v8b3ghj1cu',
         # 'NAME': os.path.join(BASE_DIR, 'mydb'),
         'USER': 'simdvdbrhwtyse',
         'PASSWORD': 'a5a6640039e9be4f303cb2fa6b0f21e2efef3110766fab7b09ebc90ba341524b',
