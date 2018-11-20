@@ -84,6 +84,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }"""
+"""local
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -92,6 +93,17 @@ DATABASES = {
         'USER': 'ifce',
         'PASSWORD': 'ifce',
         'HOST': '127.0.0.1',
+        'PORT': '5432', # 8000 is default
+    }
+}"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'bdheroku',
+        # 'NAME': os.path.join(BASE_DIR, 'mydb'),
+        'USER': 'simdvdbrhwtyse',
+        'PASSWORD': 'a5a6640039e9be4f303cb2fa6b0f21e2efef3110766fab7b09ebc90ba341524b',
+        'HOST': 'ec2-54-235-156-60.compute-1.amazonaws.com',
         'PORT': '5432', # 8000 is default
     }
 }
