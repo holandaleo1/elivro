@@ -23,7 +23,7 @@ urlpatterns = [
 	url(r'^$', index,name='index'),
 	url('contato/', contact,name='contact'),
 	#url('produtos/',product_list,name='product_list'),
-	url(r'^produtos/', include('catalog.urls')),
-	url('produto/', product,name='product'),
+	url(r'^catalogo/', include('catalog.urls')),
+	#url('produto/', product,name='product'),
     path('admin/', admin.site.urls),
 ]
