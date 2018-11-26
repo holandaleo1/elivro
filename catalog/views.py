@@ -8,14 +8,20 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 def product_list(request):
 
     list_produc =  SELECT_ALL('catalog_product')
-    paginator = Paginator(list_produc, 2)
-    page = request.GET.get('page')
-    product_lst = paginator.get_page(page)
-
+    page = request.GET.get('page',3)
+    paginator = Paginator(list_produc, 3)
+    try:
+        product_lst = paginator.page(page)
+    except PageNotAnInteger:
+        product_lst = paginator.page(1)
+    except EmptyPage:
+        product_lst = paginator.page(paginator.num_pages) 
+    #product_lst = paginator.get_page(page)
+    #paginator = Paginator(list_produc, 1)
     
     context = {'product_list': SELECT_ALL('catalog_product')}
    
-    return render(request,'catalog/product_list.html',context)
+    return render(request,'catalog/product_list.html',{'product_list': product_lst})
 
 def category(request, slug):
     #category = Category.objects.get(slug=slug)
