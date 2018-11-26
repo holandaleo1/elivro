@@ -35,6 +35,7 @@ urlpatterns = [
     #url(r'^registro/$',register, name='register'),
 	url(r'^catalogo/', include('catalog.urls')),
     url(r'^conta/', include('accounts.urls')),
+    url(r'^compras/', include('checkout.urls')),
 	#url('produto/', product,name='product'),
     path('admin/', admin.site.urls),
 ]
