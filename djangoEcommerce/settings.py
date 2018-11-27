@@ -91,19 +91,19 @@ DATABASES = {
     }
 }"""
 #local
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mydb2',
+        'NAME': 'elivro',
         # 'NAME': os.path.join(BASE_DIR, 'mydb'),
         'USER': 'ifce',
         'PASSWORD': 'ifce',
         'HOST': '127.0.0.1',
         'PORT': '5432', # 8000 is default
     }
-}"""
-
+}
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -115,7 +115,7 @@ DATABASES = {
         'PORT': '5432', # 8000 is default
     }
 }
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 

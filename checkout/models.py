@@ -17,13 +17,11 @@ class CartItemManager(models.Manager):
                 cart_key=cart_key, product=product, price=product.price
             )
         return cart_item, created
-
 class CartItem(models.Model):
 
-    cart_key = models.CharField(
-        'Chave do Carrinho', max_length=40, db_index=True
-    )
+    cart_key = models.CharField('Chave do Carrinho', max_length=50, db_index=True)
     product = models.ForeignKey('catalog.Product',on_delete = models.PROTECT,verbose_name='Produto')
+
     quantity = models.PositiveIntegerField('Quantidade', default=1)
     price = models.DecimalField('Preço', decimal_places=2, max_digits=8)
     objects = CartItemManager()
