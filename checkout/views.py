@@ -74,6 +74,7 @@ class CheckoutView(LoginRequiredMixin, TemplateView):
             order = Order.objects.create_order(
                 user=request.user, cart_items=cart_items
             )
+            
         else:
             messages.info(request, 'Não há itens no carrinho de compras')
             return redirect('cart_item')
